@@ -75,3 +75,24 @@ USE SQLTutorial
 
 SELECT *
 FROM SQLTutorial.dbo.EmployeeSalary
+
+-- STATEMENT WHERE
+-- =, <>, >, <, AND, OR, LIKE, NULL, NOT NULL, IN
+
+SELECT *
+FROM EmployeeDemographics
+WHERE FirstName = 'Jim'
+
+SELECT *
+FROM EmployeeDemographics
+WHERE Age <= 32 AND Gender = 'Male'
+
+SELECT *
+FROM EmployeeDemographics
+WHERE LastName LIKE '%S%ott%' -- Wildcard pada akhir karakter, memilih last name yang berawalan dengan huruf S
+-- %S% terdapat huruf S, S% berawalan S, %S Akhiran S, ott% terdapat ott pada kolom
+
+SELECT *
+FROM EmployeeDemographics
+WHERE LastName is NOT NULL
+-- NULL dan NOT NULL
