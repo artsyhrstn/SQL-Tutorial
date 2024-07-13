@@ -101,3 +101,21 @@ SELECT *
 FROM EmployeeDemographics
 WHERE FirstName IN ('Jim', 'Michael')
 -- Seperti AND namun dalam jumlah yang banyak
+
+-- GROUP BY
+SELECT DISTINCT(Gender) -- Hanya mengambil nilai yang unik saja
+FROM EmployeeDemographics
+
+SELECT * -- Hanya mengambil nilai yang unik saja
+FROM EmployeeDemographics
+
+SELECT Gender, COUNT(Gender) AS CountGender-- Dapat digunakan untuk menghitung dari grup yang telah ditentukan
+FROM EmployeeDemographics
+WHERE Age > 30
+GROUP BY Gender
+ORDER BY CountGender DESC
+
+SELECT Gender, Age, COUNT(Gender) AS CountGender-- digunakan untuk menghitung dari grup yang telah ditentukan dengan berbagai kolom yang telah ditentukan
+-- Age berada pada turunan kolom gender (kolom acuan)
+FROM EmployeeDemographics
+GROUP BY Gender, Age
