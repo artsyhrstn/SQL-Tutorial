@@ -96,3 +96,8 @@ SELECT *
 FROM EmployeeDemographics
 WHERE LastName is NOT NULL
 -- NULL dan NOT NULL
+
+SELECT *
+FROM EmployeeDemographics
+WHERE FirstName IN ('Jim', 'Michael')
+-- Seperti AND namun dalam jumlah yang banyak
