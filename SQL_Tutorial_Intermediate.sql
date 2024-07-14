@@ -24,3 +24,9 @@ SELECT *
 FROM SQLTutorial.dbo.EmployeeDemographics
 Inner Join SQLTutorial.dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+-- Membuat JOIN
+SELECT *
+FROM SQLTutorial.dbo.EmployeeDemographics
+Full Outer Join SQLTutorial.dbo.EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
