@@ -34,3 +34,8 @@ WHERE LENGTH(CONTENT) > 15
 SELECT EmployeeUNI.unique_id, Employees.name
 FROM Employees
 LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id
+
+-- Soal 7
+SELECT product_name, year, price
+FROM product, sales
+WHERE sales.product_id=product.product_id
